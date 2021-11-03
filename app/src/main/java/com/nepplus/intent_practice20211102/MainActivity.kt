@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
             val newIntent = Intent(this,Practiceintence::class.java)
             startActivity(newIntent)
 //  다른 화면으로 넘어가는 변수 선언 및 명령문 연습
+
+        btnName.setOnClickListener {
+
+            startActivity(newIntent)
+            val nameList = edtYourName.text.toString()
+            newIntent.putExtra("name",nameList)
+        }
         }
     }
 }
